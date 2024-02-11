@@ -1,0 +1,92 @@
+.button {
+    -fx-font-weight: bold;
+    -fx-background-color:  #00BCD4;
+    -fx-font-size: 22;
+    -fx-background-radius: 60;
+
+}
+
+.button:hover{
+
+
+    /*-fx-background-color: white;*/
+    -fx-text-fill: red;
+    /*-fx-border-color: #00BCD4;*/
+    -fx-border-width: 3;
+    -fx-border-radius: 60;
+
+
+
+}
+
+
+
+.button:pressed{
+
+    -fx-background-color: white;
+    -fx-text-fill: #00BCD4;
+    -fx-border-color: #00BCD4;
+    -fx-border-width: 3;
+    -fx-rotate: 5;
+
+}
+
+
+.text-area {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 24;
+
+}
+
+
+.text-area:hover{
+
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+
+}
+
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+#Bt1{
+    -fx-color-label-visible: white;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 1;
+
+
+
+    /*-fx-border-radius: 0;*/
+    -fx-background-radius: 0 !important;
+    /*-fx-border-width: 0 !important;*/
+    -fx-transition: background 0.7s, text-fill 0.7s;
+}
+#Bt1:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 2, 2);
+
+
+    fx-border:white;
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 !important;
+    /*-fx-border-color: white !important;*/
+    -fx-border-width: 0  0 2px 0 !important;
+    -fx-border-color: red;
+    -fx-border-radius: 0 !important;
+
+}

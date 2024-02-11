@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #00BCD4;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.atmmanagementsys.ibrahim.controllers.UserPageController">
+    <children>
+
+<!--        les buttons pour les operations-->
+<!--        <Pane layoutX="595.0" layoutY="105.0" prefHeight="520.0" prefWidth="685.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">-->
+<!--            <children>-->
+<!--                <Label fx:id="mssg1" layoutX="40.0" layoutY="220.0" prefHeight="40.0" prefWidth="251.0" textFill="#f50000">-->
+<!--                    <font>-->
+<!--                        <Font name="System Bold" size="16.0" />-->
+<!--                    </font>-->
+<!--                </Label>-->
+<!--                <Button focusTraversable="false" layoutX="55.0" layoutY="60.0" mnemonicParsing="false" onAction="#DepositMoney" prefHeight="85.0" prefWidth="250.0" text="Deposit Money" textFill="WHITE">-->
+<!--                    <font>-->
+<!--                        <Font name="System Bold" size="15.0" />-->
+<!--                    </font>-->
+<!--                    <cursor>-->
+<!--                        <Cursor fx:constant="OPEN_HAND" />-->
+<!--                    </cursor>-->
+<!--                </Button>-->
+<!--                <Button focusTraversable="false" layoutX="55.0" layoutY="215.0" mnemonicParsing="false" onAction="#Withdraw" prefHeight="85.0" prefWidth="250.0" text="Withdraw Money" textFill="WHITE">-->
+<!--                    <font>-->
+<!--                        <Font name="System Bold" size="15.0" />-->
+<!--                    </font>-->
+<!--                    <cursor>-->
+<!--                        <Cursor fx:constant="OPEN_HAND" />-->
+<!--                    </cursor>-->
+<!--                </Button>-->
+<!--                <Button focusTraversable="false" layoutX="55.0" layoutY="370.0" mnemonicParsing="false" onAction="#CheckBalance" prefHeight="85.0" prefWidth="250.0" text="Check Balance" textFill="WHITE">-->
+<!--                    <font>-->
+<!--                        <Font name="System Bold" size="15.0" />-->
+<!--                    </font>-->
+<!--                    <cursor>-->
+<!--                        <Cursor fx:constant="OPEN_HAND" />-->
+<!--                    </cursor>-->
+<!--                </Button>-->
+<!--                <Button focusTraversable="false" layoutX="380.0" layoutY="59.0" mnemonicParsing="false" onAction="#ChangePassword" prefHeight="85.0" prefWidth="250.0" text="Change Password" textFill="WHITE">-->
+<!--                    <font>-->
+<!--                        <Font name="System Bold" size="15.0" />-->
+<!--                    </font>-->
+<!--                    <cursor>-->
+<!--                        <Cursor fx:constant="OPEN_HAND" />-->
+<!--                    </cursor>-->
+<!--                </Button>-->
+<!--                <Button focusTraversable="false" layoutX="380.0" layoutY="215.0" mnemonicParsing="false" onAction="#BalanceTransfer" prefHeight="85.0" prefWidth="250.0" text="Balance Transfer" textFill="WHITE">-->
+<!--                    <font>-->
+<!--                        <Font name="System Bold" size="15.0" />-->
+<!--                    </font>-->
+<!--                    <cursor>-->
+<!--                        <Cursor fx:constant="OPEN_HAND" />-->
+<!--                    </cursor>-->
+<!--                </Button>-->
+<!--                <Button focusTraversable="false" layoutX="380.0" layoutY="370.0" mnemonicParsing="false" onAction="#AccountInfo" prefHeight="85.0" prefWidth="250.0" text="Information" textFill="WHITE">-->
+<!--                    <font>-->
+<!--                        <Font name="System Bold" size="15.0" />-->
+<!--                    </font>-->
+<!--                    <cursor>-->
+<!--                        <Cursor fx:constant="OPEN_HAND" />-->
+<!--                    </cursor>-->
+<!--                </Button>-->
+<!--            </children>-->
+<!--        </Pane>-->
+<!--   fin des buttons pour les operations-->
+        <ToolBar id="navigationBar"   prefWidth="2000" layoutY="0" style="-fx-background-color: #0097A7;">
+
+        <HBox layoutX="500" layoutY="50">
+    <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="35.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../icons/5.png" />
+        </image>
+    </ImageView>
+    <Label   prefHeight="75.0" prefWidth="415.0" text="   A Smarter Way Of Banking." textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="32.0" />
+        </font>
+    </Label>
+
+        </HBox>
+            <Button  id="Bt1" mnemonicParsing="false" onAction="#AccountInfo" text="Information" textFill="WHITE"/>
+            <Button  id="Bt1" mnemonicParsing="false" onAction="#CheckBalance" text="Check Balance" textFill="WHITE"/>
+            <Button  id="Bt1" mnemonicParsing="false" onAction="#ChangePassword" text="Change Password" textFill="WHITE"/>
+            <Button id="Bt1"  mnemonicParsing="false" onAction="#DepositMoney" text="Deposit Money" textFill="WHITE"/>
+            <Button    id="Bt1" mnemonicParsing="false" onAction="#Withdraw" text="Withdraw Money" textFill="WHITE"/>
+            <Button  id="Bt1" mnemonicParsing="false" onAction="#BalanceTransfer" text="Balance Transfer" textFill="WHITE"/>
+
+
+
+            <Label fx:id="welcome" alignment="BASELINE_RIGHT" prefHeight="75.0" prefWidth="400" text="WELCOME" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="32.0" />
+                </font>
+            </Label>
+
+
+        </ToolBar>
+        <TextArea fx:id="quotedis" editable="false" layoutX="35.0" layoutY="350.0" prefHeight="275.0" prefWidth="500.0" stylesheets="@../styles/UserPage.css" text="Do Not Save What Is Left After Spending , Spend What Is Left After Saving." wrapText="true">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextArea>
+        <VBox layoutX="595.0" layoutY="105.0" prefHeight="520.0" prefWidth="685.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+            <children>
+
+
+        <PieChart fx:id="pieChart">
+
+
+<!--        </PieChart>-->
+<!--            <PieChart.Data name="Category 1" value="30"/>-->
+<!--                <PieChart.Data name="Category 2" value="25"/>-->
+<!--                <PieChart.Data name="Category 3" value="45"/>-->
+        </PieChart>
+            </children>
+        </VBox>
+
+
+
+    </children>
+</AnchorPane>

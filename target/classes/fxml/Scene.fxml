@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.atmmanagementsys.test.FXMLController">
+
+    <!-- first VBOX -->
+    <VBox id="Vbox" spacing="20"   layoutX="125" layoutY="100" >
+<VBox alignment="CENTER" >
+            <ImageView id="icon_User" fitWidth="150" fitHeight="150">
+                <image>
+                    <Image url="@../icons/User.png" />
+                </image>
+            </ImageView>
+</VBox>
+            <TextField fx:id="useridtf" promptText="User ID" style="-fx-border-color: #39b5ff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 22;">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </TextField>
+            <PasswordField fx:id="passwordtf" promptText="Password" style="-fx-border-color: #39b5ff; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </PasswordField>
+
+        <HBox spacing="10" alignment="CENTER">
+            <RadioButton fx:id="userrb" selected="true" text="USER" textFill="BLACK">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </RadioButton>
+            <RadioButton fx:id="adminrb" text="ADMIN" textFill="BLACK">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </RadioButton>
+            <RadioButton fx:id="emprb" text="EMPLOYEE" textFill="BLACK">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </RadioButton>
+        </HBox>
+    <VBox alignment="CENTER" >
+            <Button fx:id="loginb" onAction="#Login" style="-fx-background-color: #4CAF50; -fx-text-fill: BLACK;">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+                LOGIN
+            </Button>
+    </VBox>
+    <VBox alignment="CENTER" >
+
+            <Label fx:id="mssg" textFill="#f50000">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+
+    </VBox>
+    </VBox>
+
+</AnchorPane>
